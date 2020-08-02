@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function pwmatch()
+		{
+			var pw= document.getElementById('ash').value;
+			var pw1= document.getElementById('ashk').value;
+			if(pw != pw1)
+			{
+				alert('invalid password');
+				return false;
+			}
+			else
+			{
+				alert('valid password');
+				return true;
+			}
+		}
+</script>
+</head>
+<body>
+<form action="three.html">
+<input type="password" id="pass" name="pass">
+<input type="submit" onclick="return passvalidate()">
+</form>
+
+</head>
+<body>

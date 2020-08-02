@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+types=["select","UG","PG"];
+
+
+function filldd()
+{
+var typeDD=document.getElementById('type');
+for(i=0;i<types.length;i++){
+var ele=document.createElement('option');
+ele.text=types[i];
+typeDD.add(ele,i+1)
+}
+}
+
+
+   data=[['B.COM','B.SC','B.E','B.TECH','MBBS','BABL'],['M.COM','M.SC','M.E','M.TECH','M.L','M.D']];
+
+
+function fillData()
+{
+var typeDDN=document.getElementById('type');
+  var selectedIdx= typeDDN.selectedIndex;
+
+console.log(selectedIdx);
+
+var dataDD=document.getElementById('dd');
+
+dataDD.innerText=null;
+
+
+for(i=0;i<data[selectedIdx-1].length;i++)
+{
+
+var ele=document.createElement('option');
+ele.text=data[selectedIdx-1][i];
+
+dataDD.add(ele,i+1)
+
+
+}
+
+
+}
+
+
+</script>
+
+
+</head>
+
+<body onload="filldd()">
+
+<select id="type" onchange="fillData()">
+</select>
+
+<select id="dd">
+<option></option>
+</select>
+
+
+</body>
+</html>

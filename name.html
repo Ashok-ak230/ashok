@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+function namevalidate()
+{
+var name= document.getElementById('name').value;
+var isCaps=false;
+
+
+for(i=0;i<name.length;i++)
+{
+if(name[i] >='A' && name[i]<='Z')
+{
+isCaps=true;
+break;
+}
+}
+
+if(isCaps)
+	return true;
+else{
+alert('Enter Name in Capital Letter')
+	return false;
+}
+
+
+}
+
+</script>
+
+
+</head>
+
+
+<body>
+
+
+<input type="text" id="name">
+<input type="submit" onclick="return namevalidate()">
+
+
+</body>
+</html>
