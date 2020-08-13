@@ -1,0 +1,66 @@
+-> create table Employee with the following attributes and constraints
+
+EmpFName
+EmpMName
+EmpLastName
+EmpAge -> must be a positive number and less than 50
+EmpCity -> should begin with letter B (Ex: Bangalore , Bijapur)
+EmpDesignation -> can be any manager (Ex sales manager, acc manager)
+EmpId -> primary key must have 5 chars (EX: emp01,emp02,emp03)
+empDOB -> must be a date(data type) column
+
+-> insert 5 employee details
+
+->update any employe and change city name
+
+-> delete an employee
+ 
+-> delete all employees
+
+->get back all the employees deleted in previous delete
+
+-> display employee  name and dob in(DD-MM-YYYY) fromat
+
+-> display employee  name in following format  
+       Fname   Mname    lname
+Ex:  Sachin  Ramesh  Tendulkar
+should be displayed as  S.R.Tendulkar
+
+
+
+
+create table Employee
+(
+empfname varchar(20),
+empmname varchar(20),
+emplastname varchar(20),
+empage int check(empage between 0 and 49),
+empcity varchar(20) check(empcity like 'B%'),
+empdesignation varchar(30) check(empdesignation like '% manager'),
+empid varchar(5) primary key check(empid like 'emp%'),
+empdob date
+); 
+
+insert into Employee values('pan','kannan','Ashok',21,'Banglore','sales manager','emp01','01-mar-2020');
+
+
+insert into Employee values('ban','sannan','ram',22,'Bang','region manager','emp02','02-mar-2020');
+
+insert into Employee values('pall','ban','raja',24,'Boj','level manager','emp03','04-jun-2020');
+
+insert into Employee values('sak','sun','mana',25,'Ban','section manager','emp04','05-jun-2020');
+
+update Employee set empcity='Banglr' where empid='emp03';
+
+delete from Employee where empid='emp04';
+
+commit;
+
+delete from Employee;
+
+rollback;
+
+select empfname,empmname,emplastname,empdob from employee;
+
+select SUBSTR(empfname,1,1) ||'.'||SUBSTR(empmname,1,1)||'.'||emplastname as Name from Employee where empid='emp01';
+
