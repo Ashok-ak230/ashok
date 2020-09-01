@@ -1,0 +1,54 @@
+create table students
+(
+studId int,
+studName varchar(20),
+sem int
+);
+
+create table attendance
+(
+studId int,
+studName varchar(20),
+ADate date,
+sem int,
+attendance varchar(10)
+);
+
+create table attendance
+(
+stud_id int,
+stud_name varchar(20),
+ADate date,
+sem int,
+attendance varchar(10)
+);
+insert into students values(110,'aravind','1');
+insert into students values(111,'akash','1');
+insert into students values(112,'ashik','1');
+insert into students values(113,'abdul','1');
+
+insert into students values(220,'bala','2');
+insert into students values(221,'balaram','2');
+insert into students values(222,'balan','2');
+insert into students values(223,'babu','2');
+
+insert into students values(330,'divya','3');
+insert into students values(331,'dinesh','3');
+insert into students values(332,'dravid','3');
+insert into students values(333,'deepika','3');
+
+insert into students values(440,'elango','4');
+insert into students values(441,'eshwar','4');
+insert into students values(442,'easwari','4');
+insert into students values(443,'easwaran','4');
+
+insert into students values(550,'sundar','5');
+insert into students values(551,'sathesh','5');
+insert into students values(552,'shyam','5');
+insert into students values(553,'saravanan','5');
+
+insert into students values(660,'jayashri','6');
+insert into students values(661,'janani','6');
+insert into students values(662,'jaya','6');
+insert into students values(663,'julieee','6');
+
